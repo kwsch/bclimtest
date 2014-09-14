@@ -103,7 +103,7 @@ namespace bclimtest
                     blue = 0x11 * ((val >> 4) & 0xf);
                     return Color.FromArgb(alpha, red, green, blue);
                 case 5: // PixelFormat.LA8:
-                    red = val >> 8;
+                    red = (val >> 8) 0xFF;
                     alpha = val & 0xFF;
                     return Color.FromArgb(alpha, red, red, red);
                 case 6: // PixelFormat.HILO8: //use only the HI
